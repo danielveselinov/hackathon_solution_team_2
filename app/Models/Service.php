@@ -16,4 +16,9 @@ class Service extends Model
         'image2',
         'service_type_id',
     ];
+
+    public function service_type()
+    {
+        return $this->belongsTo(ServiceType::class);
+    }
 }
