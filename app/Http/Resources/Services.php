@@ -20,7 +20,6 @@ class Services extends JsonResource
             'image1' => $this->image1,
             'text2' => $this->text2,
             'image2' => $this->image2,
-            'service_type_id' => $this->service_type_id,
         ];
     }
 }
