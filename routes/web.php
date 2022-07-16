@@ -31,10 +31,11 @@ require __DIR__.'/auth.php';
 
 Route::middleware('auth')->group(function() {
     Route::resource('/blogs', BlogsController::class)->except('show');
+    Route::resource('/missions', MissionsController::class)->except('show');
 });
 
-Route::get('/news', [BlogsController::class, 'index'])->name('news.index')->middleware('auth');
-Route::get('/missions', [MissionsController::class, 'index'])->name('missions.index')->middleware('auth');
+Route::get('/news', [NewsController::class, 'index'])->name('news.index')->middleware('auth');
+// Route::get('/missions', [MissionsController::class, 'index'])->name('missions.index')->middleware('auth');
 Route::get('/careers', [CareersController::class, 'index'])->name('careers.index')->middleware('auth');
 Route::get('/services', [ServicesController::class, 'index'])->name('services.index')->middleware('auth');
 Route::get('/banner', [BannerImagesController::class, 'index'])->name('banner.index')->middleware('auth');
