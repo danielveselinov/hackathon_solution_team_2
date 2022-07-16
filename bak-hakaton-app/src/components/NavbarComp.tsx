@@ -5,6 +5,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import { Link } from "react-router-dom";
 import styles from "../styles/HeaderStyles/navbar.module.scss";
 
 type Props = {};
@@ -32,7 +33,11 @@ export default function NavbarComp({}: Props) {
                 style={{ maxHeight: "100px" }}
                 navbarScroll
               >
-                <Nav.Link className={styles["navbar-dark-text"]} href="/">
+                <Nav.Link
+                  as={Link}
+                  className={styles["navbar-dark-text"]}
+                  to="/"
+                >
                   Home
                 </Nav.Link>
                 <Nav.Link className={styles["navbar-dark-text"]} href="about">

@@ -1,4 +1,6 @@
 @use "./variables.scss" as var;
+@use "./mixins.scss" as mix;
+@use "sass:math";
 
 .about-title {
   margin: 150px 0;

@@ -1,0 +1,23 @@
+@use "./variables.scss" as var;
+@use "./mixins.scss" as mix;
+@use "sass:math";
+
+.formStyle {
+    @extend %section;
+    margin: 0 auto;
+    input {
+        padding: math.div(var.$gutter-base, 2);
+        background-color: var.$background-color-dextertiary;
+        border: 2px solid var.$background-color-optertiary;
+        border-radius: 5px;
+    }
+    label {
+        font-size: var.$font-size-medium;
+        
+    }
+   textarea {
+    background-color: var.$background-color-dextertiary;
+    border: 2px solid var.$background-color-optertiary;
+    border-radius: 5px;
+   }
+}

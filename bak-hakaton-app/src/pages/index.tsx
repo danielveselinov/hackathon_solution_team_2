@@ -1,6 +1,7 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { Blog } from "../components/Blog";
+import HomePageContactForm from "../components/HomePageContactForm";
 import HeroBanner from "../components/HeroBanner";
 import MainTitle from "../components/MainTitle";
 import News from "../components/News";
@@ -28,6 +29,7 @@ const Home: NextPage = () => {
       </div>
       <Blog />
       <News />
+      <HomePageContactForm />
     </div>
   );
 };

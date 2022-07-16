@@ -1,6 +1,6 @@
 @use "./variables.scss" as var;
 @use "./mixins.scss" as mix;
-
+@use "sass:math";
 .about-us-inner-container {
   background-color: var.$background-color-primary;
   min-height: 200px;
