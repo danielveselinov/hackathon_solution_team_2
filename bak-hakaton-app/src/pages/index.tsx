@@ -4,12 +4,15 @@ import { Blog } from "../components/Blog";
 import HomePageContactForm from "../components/HomePageContactForm";
 import HeroBanner from "../components/HeroBanner";
 import MainTitle from "../components/MainTitle";
-import News from "../components/News";
+import ServiceCards from "../components/ServiceCards";
 import { fetchData } from "../helpers/helpers";
 
 import styles from "../styles/HeaderStyles/heroBanner.module.scss";
+import News from "../components/News";
 
-const Home: NextPage = () => {
+interface Props {}
+
+const Home: NextPage<Props> = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -32,6 +35,12 @@ const Home: NextPage = () => {
       <HomePageContactForm />
     </div>
   );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: {},
+  };
 };
 
 export default Home;

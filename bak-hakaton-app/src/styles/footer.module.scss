@@ -18,7 +18,7 @@
   @include mix.tablet-styles {
     flex-direction: column;
     text-align: center;
-    row-gap: 10px;
+    row-gap: 20px;
   }
 
   .footer-links-container {
@@ -41,6 +41,11 @@
     @include mix.tablet-styles {
       order: 1;
     }
+
+    img {
+      width: 220px;
+      height: 120px;
+    }
   }
 
   .footer-media-links-container {
@@ -50,7 +55,7 @@
 
     @include mix.tablet-styles {
       order: 3;
-      gap: 40px;
+      gap: 60px;
       padding: 0;
     }
     .footer-media-link {
