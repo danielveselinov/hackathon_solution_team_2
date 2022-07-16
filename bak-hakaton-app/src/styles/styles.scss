@@ -1,6 +1,5 @@
 // Font settings
-$font-family-base: 'Roboto', sans-serif;
-$heading-family-base: 'Reenie Beanie', sans-serif;
+$font-family-base: 'Montserrat', sans-serif;
 
 $font-size-xs: 11px;
 $font-size-small: 12px;
@@ -14,9 +13,6 @@ $font-size-placeholder: 13px;
 
 $heading-size-small: 24px;
 $heading-size-base: 36px;
-
-$line-height-base: 1.5;
-$line-height-small: 1.25;
 
 $font-weight-light: 300;
 $font-weight-lighter: 400;
@@ -32,27 +28,20 @@ $border-width-base: 1px;
 $border-radius-base: 4px;
 
 // color settings
-$text-color-base: #a16a5e;
-$text-color-primary: #fcebd5;
-$text-color-secondary: #f8f8f8;
-$text-color-tertiary: #edd5bb;
-$text-color-quartertiary: #5A5A5A;
-$text-color-qintertiary: #e09686;
+$text-color-primary: #E9E9EB;
+$text-color-base: #000000;
+$text-color-binary: #226CAF;
+$text-color-input: #AAAAAA;
+$text-color-textarea: #333333;  
 
-$background-color-base: #fcebd5;
-$background-color-primary: #f8f8f8;
-$background-color-tertiary: #e09686;
-$background-color-quartertiary: #d54c2e;
-$background-color-quintertiary: #1b59ac;
-$background-color-sextertiary: #1bac6f;
-$background-color-septertiary: #e5e5e5;
-$background-color-optertiary: #edd5bb;
-$background-color-dextertiary: #a16a5e;
-$background-color-eleven: #f5e3cb;
-
-$bg-color-brick: rgb(255, 255, 255, 0.4);
-$base-hover-color: darken($text-color-base, 20%);
-$primary-hover-color: lighten($text-color-base, 20%);
+// background color settings
+$background-color-base: #E9E9EB;
+$background-color-primary: #226CAF;
+$background-color-tertiary: #20325A;
+$background-color-quartertiary: #2B2B2B;
+$background-color-quintertiary: #D83530;
+$background-color-sextertiary: #B02A26;
+$background-color-icon: #FFFFFF;
 
 // Media queries breakpoints
 $layout-breakpoint-small: 414px;
