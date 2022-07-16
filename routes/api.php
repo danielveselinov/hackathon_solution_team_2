@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\BlogsController;
 use App\Http\Controllers\Api\CareersController;
 use App\Http\Controllers\Api\MissionsController;
 use App\Http\Controllers\Api\NewsController;
+use App\Http\Controllers\Api\ServicesController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -27,3 +28,4 @@ Route::get('/news', [NewsController::class, 'index']);
 Route::get('/blogs', [BlogsController::class, 'index']);
 Route::get('/missions', [MissionsController::class, 'index']);
 Route::get('/careers', [CareersController::class, 'index']);
+Route::get('/services', [ServicesController::class, 'index']);
