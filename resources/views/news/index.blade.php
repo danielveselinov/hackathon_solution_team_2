@@ -29,8 +29,15 @@
                                     <td class="py-4 px-6">{{ $n->title }}</td>
                                     <td class="py-4 px-6">{{ $n->image }}</td>
                                     <td class="py-4 px-6">{{ $n->link }}</td>
-                                    <td class="py-4 px-6">
-                                        <a href="#" class="font-medium text-blue-600 light:text-blue-500 hover:underline">Edit</a>
+                                    <td class="py-4 px-6 flex">
+                                        <a href="{{ route('news.edit', $n->id) }}" class="font-medium text-blue-600 light:text-blue-500 hover:underline">Edit</a>
+                                        <form method="POST" action="{{ route('news.destroy', $n->id) }}">
+                                            @csrf
+                                            @method('DELETE')
+                                            <a href="{{ route('news.destroy', $n->id) }}" class="font-medium text-blue-600 light:text-blue-500 hover:underline ml-2"
+                                            onclick="event.preventDefault();
+                                                                this.closest('form').submit();">Delete</a>
+                                        </form>
                                     </td>
                                 </tr>
                                 @endforeach
