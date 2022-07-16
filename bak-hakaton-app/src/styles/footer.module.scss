@@ -1,4 +1,62 @@
+@use "./variables.scss" as var;
+@use "./mixins.scss" as mix;
+
 .footer {
-  background-color: rgb(78, 78, 187);
+  background: linear-gradient(
+    309.36deg,
+    var.$background-color-primary -18.28%,
+    var.$background-color-tertiary 31.53%,
+    var.$background-color-tertiary 75.93%,
+    var.$background-color-primary 128.97%
+  );
+  color: var.$text-color-primary;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @extend %section;
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+    text-align: center;
+    row-gap: 10px;
+  }
+
+  .footer-links-container {
+    padding-left: 60px;
+    @media (max-width: 425px) {
+      order: 2;
+      padding: 0;
+    }
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    a {
+      color: inherit;
+      text-decoration: none;
+      display: block;
+    }
+  }
+
+  .footer-logo-container {
+    @media (max-width: 425px) {
+      order: 1;
+    }
+  }
+
+  .footer-media-links-container {
+    display: flex;
+    gap: 20px;
+    padding-right: 40px;
+
+    @media (max-width: 425px) {
+      order: 3;
+      gap: 40px;
+      padding: 0;
+    }
+    .footer-media-link {
+      color: #fff;
+      text-decoration: none;
+      font-size: 38px;
+    }
+  }
 }

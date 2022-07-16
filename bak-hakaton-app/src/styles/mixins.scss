@@ -51,10 +51,8 @@
   @include tablet-styles {
     padding-top: (var.$gutter-base);
     padding-bottom: (var.$gutter-base);
-    
   }
 }
-
 
 %wrap {
   width: 80%;
@@ -63,7 +61,22 @@
 
   @include tablet-styles {
     width: 100%;
-    padding-left: math.div(var.$gutter-base, 2);
-    padding-right: math.div(var.$gutter-base, 2);
+    padding-left: var.$gutter-base;
+    padding-right: var.$gutter-base;
+  }
+}
+
+%title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 500;
+  color: var.$background-color-quartertiary;
+  @include mobile-l-styles {
+    width: 95%;
+    text-align: left;
+    margin-bottom: 20px;
+    background-color: var.$background-color-quintertiary;
+    color: var.$text-color-primary;
+    padding: math.div(var.$gutter-base, 5) (var.$gutter-base * 1.5);
   }
 }

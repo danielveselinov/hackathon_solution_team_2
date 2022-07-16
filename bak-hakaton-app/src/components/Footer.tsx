@@ -1,7 +1,10 @@
 // icons
-import { ImFacebook2, ImLinkedin } from "react-icons/im";
-import { AiFillInstagram } from "react-icons/ai";
-import { FaTwitterSquare } from "react-icons/fa";
+import {
+  AiFillInstagram,
+  AiFillTwitterSquare,
+  AiFillLinkedin,
+  AiFillFacebook,
+} from "react-icons/ai";
 
 // styles
 import styles from "../styles/footer.module.scss";
@@ -9,25 +12,25 @@ import styles from "../styles/footer.module.scss";
 const Footer: React.FC = () => {
   return (
     <footer className={styles.footer}>
-      <div className={styles["footer-links"]}>
+      <div className={styles["footer-links-container"]}>
         <a href="#">Privacy Policy</a>
         <a href="#">Help & Support</a>
       </div>
       <div className={styles["footer-logo-container"]}>
         <h1>BAK</h1>
       </div>
-      <div className={styles["footer-media-links"]}>
-        <a href="" className={styles["media-link"]}>
-          <ImFacebook2 />
+      <div className={styles["footer-media-links-container"]}>
+        <a href="" className={styles["footer-media-link"]}>
+          <AiFillFacebook />
         </a>
-        <a href="" className={styles["media-link"]}>
-          <ImLinkedin />
+        <a href="" className={styles["footer-media-link"]}>
+          <AiFillLinkedin />
         </a>
-        <a href="" className={styles["media-link"]}>
+        <a href="" className={styles["footer-media-link"]}>
           <AiFillInstagram />
         </a>
-        <a href="" className={styles["media-link"]}>
-          <FaTwitterSquare />
+        <a href="" className={styles["footer-media-link"]}>
+          <AiFillTwitterSquare />
         </a>
       </div>
     </footer>

@@ -1,0 +1,7 @@
+@use "./variables.scss" as var;
+
+.about-title {
+  margin: 150px 0;
+  text-align: center;
+  color: var.$background-color-quartertiary;
+}

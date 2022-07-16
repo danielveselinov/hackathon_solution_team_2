@@ -1,0 +1,61 @@
+@use "./variables.scss" as var;
+@use "./mixins.scss" as mix;
+@use "sass:math";
+
+.blog-inner {
+  .blog-inner-title-one {
+    @extend %title;
+    clip-path: polygon(0 0%, 100% 0, 94% 100%, 0% 100%);
+  }
+  .blog-inner-title-two {
+    @extend %title;
+    clip-path: polygon(0 1%, 94% 0, 100% 100%, 0% 100%);
+  }
+
+  .blog-inner-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @extend %wrap;
+
+    @include mix.mobile-l-styles {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+    }
+    .blog-inner-desc {
+      padding: 40px 20px 10px;
+      flex-basis: 55%;
+      background-color: var.$background-color-primary;
+
+      color: var.$text-color-primary;
+
+      p {
+        font-size: 14px;
+      }
+
+      a {
+        color: inherit;
+        text-align: right;
+        display: block;
+      }
+    }
+    .blog-inner-img-container {
+      flex-basis: 45%;
+
+      img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 60px;
+
+    @include mix.mobile-l-styles {
+      margin-bottom: 20px;
+    }
+  }
+}

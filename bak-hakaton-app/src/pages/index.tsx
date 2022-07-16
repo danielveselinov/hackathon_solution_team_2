@@ -1,6 +1,7 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
+import { Blog } from "../components/Blog";
+import { fetchData } from "../helpers/helpers";
 
 import styles from "../styles/Home.module.scss";
 
@@ -18,7 +19,7 @@ const Home: NextPage = () => {
           crossOrigin="anonymous"
         />
       </Head>
-      <div className="text-danger"></div>
+      <Blog />
     </div>
   );
 };
