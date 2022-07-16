@@ -1,0 +1,5 @@
+@use "./variables.scss" as var;
+
+.missions-container {
+  margin: (var.$gutter-base * 5) 0;
+}

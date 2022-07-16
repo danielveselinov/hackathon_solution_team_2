@@ -1,10 +1,12 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { Blog } from "../components/Blog";
+import HeroBanner from "../components/HeroBanner";
+import MainTitle from "../components/MainTitle";
 import ServiceCards from "../components/ServiceCards";
 import { fetchData } from "../helpers/helpers";
 
-import styles from "../styles/Home.module.scss";
+import styles from "../styles/HeaderStyles/heroBanner.module.scss";
 
 interface Props {}
 
@@ -22,6 +24,10 @@ const Home: NextPage<Props> = () => {
           crossOrigin="anonymous"
         />
       </Head>
+      <div className={styles.HeroBannerContainer}>
+        <HeroBanner />
+        <MainTitle />
+      </div>
       <Blog />
       <ServiceCards />
     </div>

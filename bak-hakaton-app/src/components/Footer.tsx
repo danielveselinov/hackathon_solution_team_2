@@ -1,3 +1,6 @@
+import bakImage from "../../public/bakImage.png";
+
+import Image from "next/image";
 // icons
 import {
   AiFillInstagram,
@@ -17,7 +20,7 @@ const Footer: React.FC = () => {
         <a href="#">Help & Support</a>
       </div>
       <div className={styles["footer-logo-container"]}>
-        <h1>BAK</h1>
+        <img src={bakImage.src} alt="bak" />
       </div>
       <div className={styles["footer-media-links-container"]}>
         <a href="" className={styles["footer-media-link"]}>

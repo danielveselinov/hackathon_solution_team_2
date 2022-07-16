@@ -6,6 +6,7 @@ import styles from "../styles/HeaderStyles/heroBanner.module.scss";
 export default function HeroBanner() {
   return (
     <>
+      {/* <div className={styles.HeroBannerContainer}> */}
       <div className={styles.HeroBanner}>
         <div className={styles.letterB}>
           <Carousel fade variant="dark">
@@ -104,6 +105,7 @@ export default function HeroBanner() {
           </Carousel>
         </div>
       </div>
+      {/* </div> */}
     </>
   );
 }

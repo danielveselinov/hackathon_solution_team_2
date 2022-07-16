@@ -3,22 +3,45 @@ import Image from "next/image";
 // styles
 import styles from "../styles/blog-inner.module.scss";
 
-export const BlogInner = () => {
+export interface BlogType {
+  id: string;
+  title: string;
+  text: string;
+  image: string;
+}
+
+interface Props {
+  blog: BlogType;
+  idx: number;
+}
+
+const BlogInner: React.FC<Props> = ({ blog, idx }) => {
+  const { image, text, title } = blog;
   return (
     <div className={styles["blog-inner"]}>
-      <h2 className={styles["blog-inner-title-one"]}>What we do</h2>
+      <h2
+        className={`${
+          idx % 2 === 0
+            ? styles["blog-inner-title-one"]
+            : styles["blog-inner-title-two"]
+        }`}
+      >
+        {title}
+      </h2>
       <div className={styles["blog-inner-content"]}>
         <div className={styles["blog-inner-desc"]}>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto hic
-            dignissimos ea delectus rerum vitae.
-          </p>
+          <p>{text}</p>
           <a href="#">Read more</a>
         </div>
         <div className={styles["blog-inner-img-container"]}>
-          <img src={"https://picsum.photos/id/237/200/300"} alt="" />
+          <img
+            src={`https://5884-46-217-247-67.eu.ngrok.io/storage/${image}`}
+            alt={title}
+          />
         </div>
       </div>
     </div>
   );
 };
+
+export default BlogInner;
