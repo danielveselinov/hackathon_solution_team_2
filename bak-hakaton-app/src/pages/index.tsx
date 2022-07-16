@@ -1,9 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import styles from "../styles/Home.module.css";
+
+import styles from "../styles/Home.module.scss";
 
 const Home: NextPage = () => {
   return (
@@ -19,9 +18,7 @@ const Home: NextPage = () => {
           crossOrigin="anonymous"
         />
       </Head>
-      <Header />
-      <Footer />
-      <div className="text-danger">Text</div>
+      <div className="text-danger"></div>
     </div>
   );
 };
