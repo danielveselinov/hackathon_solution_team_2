@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\BannerImagesController;
 use App\Http\Controllers\Api\BlogsController;
 use App\Http\Controllers\Api\CareersController;
 use App\Http\Controllers\Api\MissionsController;
@@ -29,3 +30,4 @@ Route::get('/blogs', [BlogsController::class, 'index']);
 Route::get('/missions', [MissionsController::class, 'index']);
 Route::get('/careers', [CareersController::class, 'index']);
 Route::get('/services', [ServicesController::class, 'index']);
+Route::get('/banner', [BannerImagesController::class, 'index']);

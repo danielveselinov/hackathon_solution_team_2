@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BannerImagesController;
 use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\CareersController;
 use App\Http\Controllers\MissionsController;
@@ -33,3 +34,4 @@ Route::get('/blogs', [BlogsController::class, 'index'])->name('blogs.index')->mi
 Route::get('/missions', [MissionsController::class, 'index'])->name('missions.index')->middleware('auth');
 Route::get('/careers', [CareersController::class, 'index'])->name('careers.index')->middleware('auth');
 Route::get('/services', [ServicesController::class, 'index'])->name('services.index')->middleware('auth');
+Route::get('/banner', [BannerImagesController::class, 'index'])->name('banner.index')->middleware('auth');
