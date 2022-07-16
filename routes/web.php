@@ -4,6 +4,7 @@ use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\CareersController;
 use App\Http\Controllers\MissionsController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\ServicesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,3 +32,4 @@ Route::get('/news', [NewsController::class, 'index'])->name('news.index')->middl
 Route::get('/blogs', [BlogsController::class, 'index'])->name('blogs.index')->middleware('auth');
 Route::get('/missions', [MissionsController::class, 'index'])->name('missions.index')->middleware('auth');
 Route::get('/careers', [CareersController::class, 'index'])->name('careers.index')->middleware('auth');
+Route::get('/services', [ServicesController::class, 'index'])->name('services.index')->middleware('auth');
