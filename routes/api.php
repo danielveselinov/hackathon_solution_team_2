@@ -20,10 +20,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
+// Route::middleware('auth:sanctum')->group(function() {
+    
+// });
 
 Route::get('/news', [NewsController::class, 'index']);
 Route::get('/blogs', [BlogsController::class, 'index']);
@@ -31,3 +34,7 @@ Route::get('/missions', [MissionsController::class, 'index']);
 Route::get('/careers', [CareersController::class, 'index']);
 Route::get('/services', [ServicesController::class, 'index']);
 Route::get('/banner', [BannerImagesController::class, 'index']);
+
+// Route::post('/contact-personal', [ContactPersonalController::class, 'store']);
+// Route::post('/contact-business', [ContactBusinessController::class, 'store']);
+// Route::post('/contact-careers', [ContactCareersController::class, 'store']);
