@@ -22,8 +22,8 @@ class BlogsController extends Controller
 
     public function store(BlogStoreRequest $request)
     {
-        $imagePath = request('image1')->store('uploads', 'public');
-        $imagePath2 = request('image2')->store('uploads', 'public');
+        $imagePath = request('image1')->store('uploads/about_us_blogs', 'public');
+        $imagePath2 = request('image2')->store('uploads/about_us_blogs', 'public');
 
         AboutUsBlog::create([
             'text' => $request->text,
@@ -48,12 +48,12 @@ class BlogsController extends Controller
         ]);
 
         if (request('image1')) {
-            $imagePath = request('image1')->store('uploads', 'public');
+            $imagePath = request('image1')->store('uploads/about_us_blogs', 'public');
             $firstImg = ['image1' => $imagePath];
         }
 
         if (request('image2')) {
-            $imagePath2 = request('image2')->store('uploads', 'public');
+            $imagePath2 = request('image2')->store('uploads/about_us_blogs', 'public');
             $otherImg = ['image2' => $imagePath2];
         }
     
