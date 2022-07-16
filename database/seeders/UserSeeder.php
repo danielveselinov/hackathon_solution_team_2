@@ -18,11 +18,10 @@ class UserSeeder extends Seeder
     public function run()
     {
         User::create([
-            'name' => 'Bak',
+            'name' => 'Bak Logistics',
             'email' => 'bak@admin.com',
             'email_verified_at' => now(),
             'password' => Hash::make('BakAdmin'),
-            'is_admin' => '1',
             'remember_token' => Str::random(10),
         ]);
     }

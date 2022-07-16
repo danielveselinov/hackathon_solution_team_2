@@ -11,9 +11,7 @@ class ServiceType extends Model
 
     public $timestamps = false;
 
-    protected $fillable = [
-        'name',
-    ];
+    protected $guarded = [];
 
     public function services()
     {

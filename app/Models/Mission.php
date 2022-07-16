@@ -9,9 +9,5 @@ class Mission extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'title',
-        'text',
-        'image',
-    ];
+    protected $guarded = [];
 }
