@@ -1,0 +1,58 @@
+// Font settings
+$font-family-base: 'Roboto', sans-serif;
+$heading-family-base: 'Reenie Beanie', sans-serif;
+
+$font-size-xs: 11px;
+$font-size-small: 12px;
+$font-size-mdsm: 14px;
+$font-size-base: 16px;
+$font-size-medium: 18px;
+$font-size-large: 30px;
+$font-size-xl: 45px;
+
+$font-size-placeholder: 13px;
+
+$heading-size-small: 24px;
+$heading-size-base: 36px;
+
+$line-height-base: 1.5;
+$line-height-small: 1.25;
+
+$font-weight-light: 300;
+$font-weight-lighter: 400;
+$font-weight-normal: 500;
+$font-weight-bold: 700;
+
+// Size settings
+$max-width-base: 80%;
+$gutter-base: 30px;
+
+// border settings
+$border-width-base: 1px;
+$border-radius-base: 4px;
+
+// color settings
+$text-color-base: #a16a5e;
+$text-color-primary: #fcebd5;
+$text-color-secondary: #f8f8f8;
+$text-color-tertiary: #edd5bb;
+$text-color-quartertiary: #5A5A5A;
+$text-color-qintertiary: #e09686;
+
+$background-color-base: #fcebd5;
+$background-color-primary: #f8f8f8;
+$background-color-tertiary: #e09686;
+$background-color-quartertiary: #d54c2e;
+$background-color-quintertiary: #1b59ac;
+$background-color-sextertiary: #1bac6f;
+$background-color-septertiary: #e5e5e5;
+$background-color-optertiary: #edd5bb;
+$background-color-dextertiary: #a16a5e;
+$background-color-eleven: #f5e3cb;
+
+$bg-color-brick: rgb(255, 255, 255, 0.4);
+$base-hover-color: darken($text-color-base, 20%);
+$primary-hover-color: lighten($text-color-base, 20%);
+
+// Media queries breakpoints
+$layout-breakpoint-small: 414px;
