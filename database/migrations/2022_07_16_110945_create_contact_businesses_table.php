@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('company_name');
             $table->string('phone_number');
             $table->text('message');
+            $table->boolean('is_seen')->default(0);
             $table->timestamps();
         });
     }
