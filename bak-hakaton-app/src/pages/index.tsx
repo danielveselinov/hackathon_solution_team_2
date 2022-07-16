@@ -1,9 +1,12 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { Blog } from "../components/Blog";
+import HeroBanner from "../components/HeroBanner";
+import MainTitle from "../components/MainTitle";
+import News from "../components/News";
 import { fetchData } from "../helpers/helpers";
 
-import styles from "../styles/Home.module.scss";
+import styles from "../styles/HeaderStyles/heroBanner.module.scss";
 
 const Home: NextPage = () => {
   return (
@@ -19,7 +22,12 @@ const Home: NextPage = () => {
           crossOrigin="anonymous"
         />
       </Head>
+      <div className={styles.HeroBannerContainer}>
+        <HeroBanner />
+        <MainTitle />
+      </div>
       <Blog />
+      <News />
     </div>
   );
 };

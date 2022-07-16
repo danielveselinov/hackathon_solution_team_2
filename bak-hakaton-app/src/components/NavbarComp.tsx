@@ -11,59 +11,61 @@ type Props = {};
 
 export default function NavbarComp({}: Props) {
   return (
-    <Navbar>
+    // Tuka treba da se napravi ako rutata !/home, da bide transparent
+    <Navbar
+      className={styles.transparent}
+      // className="bg-transparent"
+      expand="lg"
+    >
       <Container>
-        <Row className="w-100 justify-content-betweeen">
-          <Col className="col-4">
-            <Navbar.Brand className={styles.test} href="home">
+        <Row className="w-100 justify-content-between">
+          <Col className="col-6">
+            <Navbar.Brand className={styles["navbar-dark-text"]} href="#">
               BAK
             </Navbar.Brand>
           </Col>
-          <Col className="col-8 mr-auto justify-content-end">
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse
-              className="justify-content-end"
-              id="basic-navbar-nav "
-            >
-              <Nav>
-                <Nav.Link className={styles.test} href="/">
+          <Col className="col-6 d-flex justify-content-end">
+            <Navbar.Toggle aria-controls="navbarScroll" />
+            <Navbar.Collapse className="justify-content-end" id="navbarScroll">
+              <Nav
+                className="my-2 my-lg-0"
+                style={{ maxHeight: "100px" }}
+                navbarScroll
+              >
+                <Nav.Link className={styles["navbar-dark-text"]} href="/">
                   Home
                 </Nav.Link>
-                <Nav.Link className={styles.test} href="about">
+                <Nav.Link className={styles["navbar-dark-text"]} href="about">
                   About us
                 </Nav.Link>
-                <Nav.Link className={styles.test} href="mission">
+                <Nav.Link className={styles["navbar-dark-text"]} href="mission">
                   Mission
                 </Nav.Link>
                 <NavDropdown
-                  className={styles.test}
+                  className={styles["navbar-dark-text"]}
                   title="Services"
                   id="basic-nav-dropdown"
                 >
-                  <NavDropdown.Item href="#action/3.1">
+                  <NavDropdown.Item href="land-freight">
                     Land Freight
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">
+                  <NavDropdown.Item href="water-freight">
                     Water Freight
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">
+                  <NavDropdown.Item href="air-freight">
                     Air Freight
                   </NavDropdown.Item>
-
-                  <NavDropdown.Item href="#action/3.4">
+                  <NavDropdown.Item href="warehouse-storage">
                     Warehouse Storage
                   </NavDropdown.Item>
                 </NavDropdown>
-                <Nav.Link className={styles.test} href="#link">
+                <Nav.Link className={styles["navbar-dark-text"]} href="careers">
                   Careers
                 </Nav.Link>
-                <Nav.Link className={styles.test} href="#link">
+                <Nav.Link className={styles["navbar-dark-text"]} href="contact">
                   Contact
                 </Nav.Link>
               </Nav>
-              <a href="#">
-                <span>EN</span>
-              </a>
             </Navbar.Collapse>
           </Col>
         </Row>

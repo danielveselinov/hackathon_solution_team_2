@@ -2,53 +2,52 @@
 @use '../mixins.scss' as mix;
 @use 'sass:math';
 
-.HeroBanner {
-    width: 90%;
-    margin: 100px auto auto auto ;
-    // margin-top: (var.$gutter-base * 2);
-    height: 50vh;
-    display: flex;
-    
-    .letterB{
-        width: 25%;
-        height: 100%;
-        clip-path: polygon(50% 0%, 100% 0, 100% 35%, 75% 50%, 100% 65%, 100% 100%, 0 100%, 0% 70%, 0% 35%, 0 0);
-        margin-left: 100px;
-        background: blue;
-        // .test {
-        //     width: 100%;
-        //     height: 100%;
-        // }
-        img {
-            object-fit: contain;
+.HeroBannerContainer {
+    height: 100vh;
+    background: linear-gradient(309.36deg, #226CAF -18.28%, #20325A 31.53%, #20325A 75.93%, #226CAF 128.97%);
+    padding-top: 170px;
+    .HeroBanner {
+        width: 90%;
+        height: 50vh;
+        display: flex;
+        margin: 0 auto;
+        .letterB{
+            width: 25%;
             height: 100%;
+            clip-path: polygon(50% 0%, 100% 0, 100% 35%, 75% 50%, 100% 65%, 100% 100%, 0 100%, 0% 70%, 0% 35%, 0 0);
+            margin-left: 100px;
+            background: blue;
+ 
+            img {
+                object-fit: contain;
+                height: 100%;
+            }
         }
+        .letterA{
+            width: 30%;
+            height: 100%;
+            clip-path: polygon(50% 0%, 80% 0, 100% 100%, 60% 100%, 50% 70%, 40% 100%, 0 100%, 20% 0);
+            background: green;
+            margin-left: 60px;
+        }
+    
+        .letterKone {
+            width: 30%;
+            height: 100%;
+            clip-path: polygon(40% 0, 40% 100%, 0 100%, 0 0);
+            background: rgb(115, 0, 128);
+            margin-right: -535px;
+            margin-left: 70px;
+        }
+        .letterKtwo {
+            width: 30%;
+            height: 100%;
+            clip-path: polygon(60% 0, 100% 0, 80% 50%, 100% 100%, 60% 100%, 40% 50%);
+            background: rgb(128, 0, 0);
+            margin-left: 45px;
+            margin-right: 100px;
+        // }
+       }
+            
     }
-    .letterA{
-        width: 30%;
-        height: 100%;
-        clip-path: polygon(50% 0%, 80% 0, 100% 100%, 60% 100%, 50% 70%, 40% 100%, 0 100%, 20% 0);
-        background: green;
-        margin-left: 60px;
-    }
-
-    .letterKone {
-        width: 30%;
-        height: 100%;
-
-        clip-path: polygon(40% 0, 40% 100%, 0 100%, 0 0);
-        background: rgb(115, 0, 128);
-        margin-right: -535px;
-        margin-left: 70px;
-    }
-    .letterKtwo {
-        width: 30%;
-        height: 100%;
-        clip-path: polygon(60% 0, 100% 0, 80% 50%, 100% 100%, 60% 100%, 40% 50%);
-        background: rgb(128, 0, 0);
-        margin-left: 45px;
-        margin-right: 100px;
-    // }
-   }
-        
 }

@@ -8,8 +8,7 @@ export default function Header() {
   return (
     <div className={styles["Header"]}>
       <NavbarComp />
-      <HeroBanner />
-      <MainTitle />
+      {/* <HeroBanner /> */}
     </div>
   );
 }

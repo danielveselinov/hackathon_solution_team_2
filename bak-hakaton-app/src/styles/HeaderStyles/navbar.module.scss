@@ -2,8 +2,18 @@
 @use '../mixins.scss' as mix;
 @use 'sass:math';
 
-.test {
+.navbar-dark-text{
     color: var.$text-color-primary !important;
-    
-   
 } 
+
+.navbar-light-text {
+    color: var.$text-color-base !important;
+} 
+
+.transparent {
+    background-color: #ff000000 !important;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
