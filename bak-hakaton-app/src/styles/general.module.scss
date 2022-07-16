@@ -1,0 +1,7 @@
+@use "./variables.scss" as var;
+
+.primary-title {
+  margin: (var.$gutter-base * 3) 0 (var.$gutter-base * 2);
+  text-align: center;
+  color: var.$background-color-quartertiary;
+}

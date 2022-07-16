@@ -1,0 +1,35 @@
+@use "../styles/mixins.scss" as mix;
+@use "../styles/variables.scss" as var;
+
+.service {
+  @extend %wrap;
+  margin-bottom: (var.$gutter-base * 3);
+
+  .details-container {
+    .image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      margin-bottom: (var.$gutter-base * 1.5);
+    }
+
+    p {
+      margin-bottom: var.$gutter-base;
+    }
+  }
+
+  .service-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    column-gap: 40px;
+    .service-link {
+      color: var.$background-color-quartertiary;
+
+      &.service-link-active {
+        font-weight: 500;
+        text-decoration: none;
+      }
+    }
+  }
+}

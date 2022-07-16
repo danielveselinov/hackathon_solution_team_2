@@ -6,6 +6,7 @@
   min-height: 200px;
   margin-bottom: 250px;
   display: flex;
+  margin-bottom: 200px;
 
   .about-us-flex-container {
     position: relative;
@@ -23,7 +24,7 @@
       position: absolute;
       display: flex;
       flex-direction: column;
-      row-gap: 15px;
+      row-gap: 25px;
       top: 50%;
       right: 30px;
       transform: translateY(-50%);
@@ -50,7 +51,7 @@
     }
   }
 
-  &:last-child {
-    margin-bottom: 200px;
+  &:not(:last-child) {
+    margin: 150px 0;
   }
 }

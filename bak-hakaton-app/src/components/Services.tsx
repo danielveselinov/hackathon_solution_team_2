@@ -1,7 +1,22 @@
 import React from "react";
 
-interface Props {}
+import styles from "../styles/general.module.scss";
 
-const Services: React.FC = () => {
-  return <div>Services</div>;
+import Service from "./Service";
+
+import { ServiceType } from "./Service";
+interface Props {
+  title: string;
+  service: ServiceType[];
+}
+
+const Services: React.FC<Props> = ({ title, service }) => {
+  return (
+    <>
+      <h2 className={styles["primary-title"]}>{title}</h2>
+      <Service service={service[0]} />
+    </>
+  );
 };
+
+export default Services;

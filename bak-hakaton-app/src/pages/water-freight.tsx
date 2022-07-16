@@ -11,8 +11,8 @@ interface Props {
   services: ServiceType[];
 }
 
-const LandFreight: NextPage<Props> = ({ services }) => {
-  return <Services title="Land Freight" service={services} />;
+const WaterFreight: NextPage<Props> = ({ services }) => {
+  return <Services title="Water Freight" service={services} />;
 };
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -20,7 +20,7 @@ export const getStaticProps: GetStaticProps = async () => {
     "https://5884-46-217-247-67.eu.ngrok.io/api/services"
   );
 
-  const services = data.land_freight;
+  const services = data.water_freight;
 
   return {
     props: {
@@ -29,4 +29,4 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-export default LandFreight;
+export default WaterFreight;

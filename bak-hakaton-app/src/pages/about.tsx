@@ -11,7 +11,7 @@ import AboutUsContent from "../components/AboutUsContent";
 import { fetchData } from "../helpers/helpers";
 
 // styles
-import styles from "../styles/about.module.scss";
+import styles from "../styles/general.module.scss";
 
 interface Props {
   blogs: BlogType[];
@@ -20,7 +20,7 @@ interface Props {
 const About: NextPage<Props> = ({ blogs }) => {
   return (
     <>
-      <h2 className={styles["about-title"]}>About us</h2>
+      <h2 className={styles["primary-title"]}>About us</h2>
       <AboutUsContent blogs={blogs} />
     </>
   );
