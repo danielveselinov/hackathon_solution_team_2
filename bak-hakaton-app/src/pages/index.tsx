@@ -1,11 +1,14 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { Blog } from "../components/Blog";
+import ServiceCards from "../components/ServiceCards";
 import { fetchData } from "../helpers/helpers";
 
 import styles from "../styles/Home.module.scss";
 
-const Home: NextPage = () => {
+interface Props {}
+
+const Home: NextPage<Props> = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -20,8 +23,15 @@ const Home: NextPage = () => {
         />
       </Head>
       <Blog />
+      <ServiceCards />
     </div>
   );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: {},
+  };
 };
 
 export default Home;

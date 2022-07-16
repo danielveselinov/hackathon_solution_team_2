@@ -1,0 +1,17 @@
+@use "./mixins.scss" as mix;
+
+.service-cards {
+  @extend %section;
+  .title {
+    @extend %title;
+    clip-path: polygon(0 0%, 100% 0, 94% 100%, 0% 100%);
+  }
+
+  .service-cards-container {
+    @extend %wrap;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 60px;
+  }
+}
