@@ -1,0 +1,9 @@
+@use '../variables.scss' as var;
+@use '../mixins.scss' as mix;
+@use 'sass:math';
+
+.test {
+    color: var.$text-color-primary !important;
+    
+   
+} 

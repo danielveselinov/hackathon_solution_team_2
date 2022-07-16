@@ -1,0 +1,8 @@
+@use '../variables.scss' as var;
+@use '../mixins.scss' as mix;
+@use 'sass:math';
+
+.Header {
+    height: 100vh;
+    background: linear-gradient(309.36deg, #226CAF -18.28%, #20325A 31.53%, #20325A 75.93%, #226CAF 128.97%);
+}

@@ -1,10 +1,15 @@
 import React from "react";
-import Navbar from "./NavbarComp";
+import HeroBanner from "./HeroBanner";
+import NavbarComp from "./NavbarComp";
+import styles from "../styles/HeaderStyles/headerGlobal.module.scss";
+import MainTitle from "./MainTitle";
 
-interface Props {}
-
-const Header: React.FC<Props> = (props) => {
-  return <Navbar />;
-};
-
-export default Header;
+export default function Header() {
+  return (
+    <div className={styles["Header"]}>
+      <NavbarComp />
+      <HeroBanner />
+      <MainTitle />
+    </div>
+  );
+}
