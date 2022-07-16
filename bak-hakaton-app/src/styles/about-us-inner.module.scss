@@ -14,19 +14,23 @@
     .text-container {
       color: var.$text-color-primary;
       p {
-        width: 50%;
+        width: 48%;
       }
     }
 
     .image-container {
-      width: 45%;
+      width: 46%;
       position: absolute;
       display: flex;
       flex-direction: column;
       row-gap: 15px;
       top: 50%;
-      right: 0;
+      right: 30px;
       transform: translateY(-50%);
+
+      @include mix.tablet-styles {
+        width: 43%;
+      }
 
       img {
         width: 100%;
@@ -38,7 +42,7 @@
 
     &.about-us-flex-container-reverse {
       .image-container {
-        left: 0;
+        left: 30px;
       }
       p {
         margin-left: auto;

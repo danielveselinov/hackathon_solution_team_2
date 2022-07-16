@@ -15,7 +15,7 @@ export default function NavbarComp({}: Props) {
       <Container>
         <Row className="w-100 justify-content-betweeen">
           <Col className="col-4">
-            <Navbar.Brand className={styles.test} href="#home">
+            <Navbar.Brand className={styles.test} href="home">
               BAK
             </Navbar.Brand>
           </Col>
@@ -26,13 +26,13 @@ export default function NavbarComp({}: Props) {
               id="basic-navbar-nav "
             >
               <Nav>
-                <Nav.Link className={styles.test} href="#home">
+                <Nav.Link className={styles.test} href="/">
                   Home
                 </Nav.Link>
-                <Nav.Link className={styles.test} href="#link">
+                <Nav.Link className={styles.test} href="about">
                   About us
                 </Nav.Link>
-                <Nav.Link className={styles.test} href="#link">
+                <Nav.Link className={styles.test} href="mission">
                   Mission
                 </Nav.Link>
                 <NavDropdown
@@ -40,18 +40,18 @@ export default function NavbarComp({}: Props) {
                   title="Services"
                   id="basic-nav-dropdown"
                 >
-                  <NavDropdown.Item className={styles.test} href="#action/3.1">
-                    Services
+                  <NavDropdown.Item href="#action/3.1">
+                    Land Freight
                   </NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.2">
-                    Another action
+                    Water Freight
                   </NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.3">
-                    Something
+                    Air Freight
                   </NavDropdown.Item>
-                  <NavDropdown.Divider />
+
                   <NavDropdown.Item href="#action/3.4">
-                    Separated link
+                    Warehouse Storage
                   </NavDropdown.Item>
                 </NavDropdown>
                 <Nav.Link className={styles.test} href="#link">

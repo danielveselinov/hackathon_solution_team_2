@@ -1,34 +1,32 @@
-@use '../variables.scss' as var;
-@use '../mixins.scss' as mix;
-@use 'sass:math';
+@use "../variables.scss" as var;
+@use "../mixins.scss" as mix;
+@use "sass:math";
 
 .MainTitle {
-    @extend %section;
-    width: 50%;
-    text-align: center;
-    color: var.$text-color-primary;
-    margin-top: (var.$gutter-base * 3);
-    font-size: var.$font-size-xl;
-    .firstTitleSection {
-        background-color: var.$background-color-primary;
-        clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
-        padding: 0px 30px;
-    }
-    .secondTitleSection {
-        background-color: var.$background-color-primary;
-        clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
-        padding: 0px 20px;
-    }
+  color: var.$text-color-primary;
+  margin-top: (var.$gutter-base * 1.5);
+  font-size: var.$font-size-xl;
+  margin-left: (var.$gutter-base * 2);
+  .firstTitleSection {
+    background-color: var.$background-color-primary;
+    clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+    padding: 0px 30px;
+  }
+  .secondTitleSection {
+    background-color: var.$background-color-primary;
+    clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+    padding: 0px 20px;
+  }
 }
 
 // TABLET STYLES
 @include mix.tablet-styles {
-    .img-section {
-        margin-top: 50px;
-        padding-left: 0;
+  .img-section {
+    margin-top: 50px;
+    padding-left: 0;
 
-        .box {
-            flex: 0 1 50%;
-        }
+    .box {
+      flex: 0 1 50%;
     }
+  }
 }
