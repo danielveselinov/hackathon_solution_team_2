@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,3 +26,4 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 Route::get('/news', [NewsController::class, 'index'])->name('news.index')->middleware('auth');
+Route::get('/blogs', [BlogsController::class, 'index'])->name('blogs.index')->middleware('auth');
