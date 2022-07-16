@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\BlogsController;
+use App\Http\Controllers\Api\MissionsController;
 use App\Http\Controllers\Api\NewsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -23,3 +24,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/news', [NewsController::class, 'index']);
 Route::get('/blogs', [BlogsController::class, 'index']);
+Route::get('/missions', [MissionsController::class, 'index']);
