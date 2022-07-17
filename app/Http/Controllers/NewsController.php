@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\News;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use App\Http\Requests\NewsStoreRequest;
 use App\Http\Requests\NewsUpdateRequest;
 
@@ -45,6 +46,8 @@ class NewsController extends Controller
             $imagePath = request('image')->store('uploads/news', 'public');
 
             $imageArray = ['image' => $imagePath];
+
+            File::delete(public_path('storage/'.$news->image));
         }
 
         $news->update(array_merge(
@@ -60,6 +63,8 @@ class NewsController extends Controller
 
     public function destroy(News $news)
     {
+        File::delete(public_path('storage/'.$news->image));
+
         $news->delete();
 
         return to_route('news.index')->with(['newsMessages' => true, 'message' => 'News blog deleted!']);

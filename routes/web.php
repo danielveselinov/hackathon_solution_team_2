@@ -42,7 +42,5 @@ Route::middleware('auth')->group(function() {
     Route::resource('/contact/personals', ContactPeronalsController::class)->only(['index', 'show']);
     Route::resource('/news', NewsController::class)->except('show');
     Route::resource('/services', ServicesController::class)->except('show');
+    Route::resource('/banners', BannerImagesController::class)->except('show');
 });
-
-
-Route::get('/banner', [BannerImagesController::class, 'index'])->name('banner.index')->middleware('auth');

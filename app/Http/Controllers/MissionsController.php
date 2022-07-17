@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Mission;
+use Illuminate\Support\Facades\File;
 use App\Http\Requests\MissionsStoreRequest;
 use App\Http\Requests\MissionsUpdateRequest;
-use App\Models\Mission;
 
 class MissionsController extends Controller
 {
@@ -44,6 +45,8 @@ class MissionsController extends Controller
             $imagePath = request('image')->store('uploads/missions', 'public');
 
             $imageArray = ['image' => $imagePath];
+
+            File::delete(public_path('storage/'.$mission->image));
         }
 
         $mission->update(array_merge(
@@ -59,6 +62,8 @@ class MissionsController extends Controller
 
     public function destroy(Mission $mission)
     {
+        File::delete(public_path('storage/'.$mission->image));
+        
         $mission->delete();
 
         return to_route('missions.index')->with(['missionMessages' => true, 'message' => 'Misssion blog deleted!']);

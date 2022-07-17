@@ -15,7 +15,7 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('banner.index')" :active="request()->routeIs('banner.index')">
+                    <x-nav-link :href="route('banners.index')" :active="request()->routeIs('banners.index')">
                         {{ __('Banners') }}
                     </x-nav-link>
                     <x-nav-link :href="route('news.index')" :active="request()->routeIs('news.index')">
@@ -86,6 +86,27 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('banners.index')" :active="request()->routeIs('banners.index')">
+                {{ __('Banners') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('news.index')" :active="request()->routeIs('news.index')">
+                {{ __('News') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('blogs.index')" :active="request()->routeIs('blogs.index')">
+                {{ __('Blogs') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('missions.index')" :active="request()->routeIs('missions.index')">
+                {{ __('Missions') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('career.index')" :active="request()->routeIs('career.index')">
+                {{ __('Careers') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('services.index')" :active="request()->routeIs('services.index')">
+                {{ __('Services') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('default.contact.index')" :active="request()->routeIs('default.contact.index')">
+                {{ __('Contacts') }}
             </x-responsive-nav-link>
         </div>
 
