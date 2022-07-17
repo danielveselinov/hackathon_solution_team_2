@@ -26,7 +26,7 @@ class MissionsUpdateRequest extends FormRequest
         return [
             'title' => 'required',
             'text' => 'required|max:255',
-            'image' => '',
+            'image' => 'nullable|image',
         ];
     }
 }

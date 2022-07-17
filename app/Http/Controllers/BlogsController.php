@@ -6,6 +6,7 @@ use App\Models\AboutUsBlog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use App\Http\Requests\BlogStoreRequest;
+use App\Http\Requests\AboutBlogUpdateRequest;
 
 class BlogsController extends Controller
 {
@@ -40,14 +41,8 @@ class BlogsController extends Controller
         return view('blogs.edit', compact('blog'));
     }
 
-    public function update(AboutUsBlog $blog)
+    public function update(AboutBlogUpdateRequest $request, AboutUsBlog $blog)
     {  
-        $data = request()->validate([
-            'text' => 'required',
-            'image1' => '',
-            'image2' => '',
-        ]);
-
         if (request('image1')) {
             $imagePath = request('image1')->store('uploads/about_us_blogs', 'public');
             $firstImg = ['image1' => $imagePath];
@@ -63,7 +58,9 @@ class BlogsController extends Controller
         }
     
         $blog->update(array_merge(
-            $data,
+            [
+                'text' => $request->text
+            ],
             $firstImg ?? [],
             $otherImg ?? [],
         ));

@@ -1,8 +1,9 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Contact Businesses') }}
-        </h2>
+        <div class="flex items-center">
+            <a href="{{ URL::previous() }}" class="mr-3 p-2 rounded hover:bg-blue-200"><span class="iconify" data-icon="eva:arrow-back-fill" data-width="24" data-height="24"></span></a>
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">{{ __('Contact Businesses') }}</h2>
+        </div>
     </x-slot>
 
     <div class="py-12">
