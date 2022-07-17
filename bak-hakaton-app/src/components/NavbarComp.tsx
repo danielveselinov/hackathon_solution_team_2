@@ -33,11 +33,7 @@ export default function NavbarComp({}: Props) {
                 style={{ maxHeight: "100px" }}
                 navbarScroll
               >
-                <Nav.Link
-                  as={Link}
-                  className={styles["navbar-dark-text"]}
-                  to="/"
-                >
+                <Nav.Link className={styles["navbar-dark-text"]} href="/">
                   Home
                 </Nav.Link>
                 <Nav.Link className={styles["navbar-dark-text"]} href="about">
