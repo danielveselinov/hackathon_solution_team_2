@@ -49,9 +49,6 @@
                                 @endforeach
                             </tbody>
                         </table>
-
-                        <!-- <button id="testbtn" data-image="">Test</button> -->
-
                     </div>
                 </div>
             </div>
