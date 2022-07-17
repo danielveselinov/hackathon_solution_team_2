@@ -37,6 +37,6 @@ Route::middleware('auth')->group(function() {
 });
 
 Route::get('/news', [NewsController::class, 'index'])->name('news.index')->middleware('auth');
-Route::get('/careers', [CareersController::class, 'index'])->name('careers.index')->middleware('auth');
+Route::get('/careers', [CareersController::class, 'index'])->name('default.careers.index')->middleware('auth');
 Route::get('/services', [ServicesController::class, 'index'])->name('services.index')->middleware('auth');
 Route::get('/banner', [BannerImagesController::class, 'index'])->name('banner.index')->middleware('auth');
