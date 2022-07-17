@@ -24,7 +24,7 @@ class BannerStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'image' => 'required|image|size:5120'
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ];
     }
 }

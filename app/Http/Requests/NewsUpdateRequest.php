@@ -25,7 +25,7 @@ class NewsUpdateRequest extends FormRequest
     {
         return [
             'title' => 'required',
-            'image' => 'nullable|image|size:5120',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'link' => 'required|url',
         ];
     }

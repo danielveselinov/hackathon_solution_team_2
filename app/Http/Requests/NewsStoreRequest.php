@@ -25,7 +25,7 @@ class NewsStoreRequest extends FormRequest
     {
         return [
             'title' => 'required|max:255',
-            'image' => 'required|image|max:255', 
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048', 
             'link' => 'required|url',
         ];
     }

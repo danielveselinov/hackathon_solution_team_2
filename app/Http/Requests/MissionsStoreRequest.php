@@ -26,7 +26,7 @@ class MissionsStoreRequest extends FormRequest
         return [
             'title' => 'required|max:255',
             'text' => 'required',
-            'image' => 'required|image|size:5120'
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ];
     }
 }
