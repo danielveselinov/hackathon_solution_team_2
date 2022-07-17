@@ -10,6 +10,8 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     CAREERS!
+                    <br>
+                    lista 3 kopcinja za koja tabela da ja prikaze..
                 </div>
             </div>
         </div>
