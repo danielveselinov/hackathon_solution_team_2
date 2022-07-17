@@ -36,6 +36,36 @@ export default function ContactUsForm({}: Props) {
     )
       return;
 
+    const data = {
+      full_name: inputsValue.name,
+      email: inputsValue.email,
+      company_name: inputsValue.companyName,
+      phone_number: inputsValue.phone,
+      message: inputsValue.message,
+    };
+
+    const errorHandling = {
+      message: "The full name field is required. (and 4 more errors)",
+    };
+
+    const errors = {
+      full_name: ["The full name field is required."],
+      email: ["The email field is required."],
+      company_name: ["The company name field is required."],
+      phone_number: ["The phone number field is required."],
+      message: ["The message field is required."],
+    };
+
+    fetch("https://5884-46-217-247-67.eu.ngrok.io/api/contact/business", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => console.log(res))
+      .catch((error) => {
+        console.log({ ...errorHandling, ...errors });
+      });
+
     setInputsValue(DEFAULT_FORM_VALUES);
   };
 
