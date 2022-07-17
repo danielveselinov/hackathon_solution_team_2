@@ -1,35 +1,39 @@
 @use "../variables.scss" as var;
 @use "../mixins.scss" as mix;
 @use "sass:math";
-
-.MainTitle {
-  color: var.$text-color-primary;
-  margin-top: (var.$gutter-base * 1.5);
-  font-size: var.$font-size-xl;
-  margin-left: (var.$gutter-base * 2);
-  @include mix.tablet-styles {
-    font-size: var.$font-size-medium;
-    margin-top: (var.$gutter-base * 8);
-    margin-left: 15px;
-  
-}
-  .firstTitleSection {
-    background-color: var.$background-color-primary;
-    clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
-    padding: 0px 30px;
-   
-  }
-  .secondTitleSection {
-    background-color: var.$background-color-primary;
-    clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
-    padding: 0px 20px;
+.titleContainer {
+  margin-top: auto;
+  padding: math.div(var.$gutter-base, 1.5);
+  .MainTitle {
+    color: var.$text-color-primary;
+    margin-top: (var.$gutter-base * 1.5);
+    font-size: var.$font-size-xl;
+    margin-left: (var.$gutter-base * 2);
     @include mix.tablet-styles {
-      display: inline-block;
-      width: 60%;
+      font-size: var.$font-size-medium;
+      margin-top: (var.$gutter-base * 8);
+      margin-left: 15px;
     
   }
+    .firstTitleSection {
+      background-color: var.$background-color-primary;
+      clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+      padding: 0px 30px;
+     
+    }
+    .secondTitleSection {
+      background-color: var.$background-color-primary;
+      clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+      padding: 0px 20px;
+      @include mix.tablet-styles {
+        display: inline-block;
+        width: 60%;
+      
+    }
+    }
   }
 }
+
 
 // TABLET STYLES
 @include mix.tablet-styles {

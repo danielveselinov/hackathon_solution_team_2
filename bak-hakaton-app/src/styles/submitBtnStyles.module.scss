@@ -2,14 +2,19 @@
 @use "./mixins.scss" as mix;
 @use "sass:math";
 
-
-
 .submitBtnStyles {
-    background-color: var.$background-color-sextertiary;
+    width: 30%;
+    @include mix.tablet-styles {
+        width: 100%;
+    }
+    background-color: var.$background-color-quintertiary;
     border: none;   
     font-size: var.$font-size-medium;
     font-weight: var.$font-weight-bold;
     margin-top: var.$gutter-base;
     color: var.$text-color-primary;
-    padding: 15px 150px;
+    padding: 10px 0;
+   &:hover {
+    background-color: var.$background-color-sextertiary;
+   }
 }

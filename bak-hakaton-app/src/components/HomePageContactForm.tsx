@@ -45,7 +45,7 @@ export default function ContactForm({}: Props) {
         Reach out to us for any questions or inquires
       </p>
       <Row className="justify-content-around">
-        <div className="col-6">
+        <div className="col-lg-6 col-md-12 mb-3">
           <InputLabelFormComponent
             label={"Full name"}
             type={"text"}
@@ -55,7 +55,7 @@ export default function ContactForm({}: Props) {
             value={inputsValue.name}
           />
         </div>
-        <div className="col-6">
+        <div className="col-lg-6 col-md-12 mb-3">
           <InputLabelFormComponent
             label={"Email"}
             type={"email"}

@@ -3,7 +3,7 @@ import React from "react";
 import styles from "../styles/HeaderStyles/mainTitle.module.scss";
 export default function MainTitle() {
   return (
-    <div>
+    <div className={styles.titleContainer}>
       <h2 className={styles.MainTitle}>
         <span className={styles.firstTitleSection}>Your secure</span>connection
         <br /> to the enitre

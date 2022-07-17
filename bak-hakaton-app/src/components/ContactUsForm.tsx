@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Row } from "react-bootstrap";
 import styles from "../styles/contact.module.scss";
+import style from "../styles/general.module.scss";
 import InputLabelFormComponent from "./InputLabelFormComponent";
 import SubmitButton from "./SubmitButton";
 type Props = {};
@@ -44,7 +45,7 @@ export default function ContactUsForm({}: Props) {
       className={`${styles.formStyle}
       w-75`}
     >
-      <h2 className="text-center mb-3">Contact</h2>
+      <h2 className={style["primary-title"]}>Contact</h2>
       <p className="text-center mb-4">
         In need of a logistics solution? Contact our team with sending an email
         via the form below or by phone:
@@ -54,7 +55,7 @@ export default function ContactUsForm({}: Props) {
         +389 78 788 432
       </p>
       <Row className="justify-content-around">
-        <div className="col-6">
+        <div className="col-lg-6 col-md-12 mb-3">
           <InputLabelFormComponent
             label={"Full name"}
             type={"text"}
@@ -64,7 +65,7 @@ export default function ContactUsForm({}: Props) {
             value={inputsValue.name}
           />
         </div>
-        <div className="col-6">
+        <div className="col-lg-6 col-md-12 mb-3">
           <InputLabelFormComponent
             label={"Email"}
             type={"email"}
@@ -76,7 +77,7 @@ export default function ContactUsForm({}: Props) {
         </div>
       </Row>
       <Row className="justify-content-around">
-        <div className="col-6">
+        <div className="col-lg-6 col-md-12 mb-3">
           <InputLabelFormComponent
             label={"Company Name"}
             type={"text"}
@@ -86,7 +87,7 @@ export default function ContactUsForm({}: Props) {
             value={inputsValue.companyName}
           />
         </div>
-        <div className="col-6">
+        <div className="col-lg-6 col-md-12 mb-3">
           <InputLabelFormComponent
             label={"Phone Number"}
             type={"phone"}

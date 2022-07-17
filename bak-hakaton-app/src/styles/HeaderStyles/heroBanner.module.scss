@@ -6,6 +6,8 @@
     min-height: 100vh;
     background: linear-gradient(309.36deg, #226CAF -18.28%, #20325A 31.53%, #20325A 75.93%, #226CAF 128.97%);
     padding-top: 140px;
+    display: flex;
+    flex-direction: column;
     .HeroBanner {
         width: 70%;
         margin: 0 auto;
@@ -14,14 +16,10 @@
         @include mix.tablet-styles {
             width: 95%;
         }
-        // height: 50vh;
         .letterB{
             flex-basis: 30%;
             aspect-ratio: 1.5;
             clip-path: polygon(50% 0%, 100% 0, 100% 35%, 75% 50%, 100% 65%, 100% 100%, 0 100%, 0% 70%, 0% 35%, 0 0);
-            // margin-left: 100px;
-        //  height: 300px;
-            
         }
         .letterA{
             flex-basis: 30%;
@@ -30,17 +28,12 @@
             @include mix.tablet-styles {
                 transform: translateY(85%);
             }
-            // margin-left: 60px;
-           
-        
         }
     
         .letterK {
             flex-basis: 30%;
             aspect-ratio: 1.5;
             clip-path: polygon(39% 0, 40% 49%, 60% 0, 100% 0, 80% 50%, 100% 100%, 61% 100%, 40% 49%, 39% 100%, 0 100%, 0 0);
-            // margin-right: -535px;
-            // margin-left: 70px;
         }
        
             

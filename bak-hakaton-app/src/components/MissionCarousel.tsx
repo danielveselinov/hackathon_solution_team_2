@@ -3,7 +3,7 @@ import React from "react";
 import { Carousel } from "react-bootstrap";
 import styles from "../styles/missionCarousel.module.scss";
 type Props = {};
-import { Image } from "";
+
 export default function MissionCarousel({}: Props) {
   return (
     <div className={styles.missionCarousel}>

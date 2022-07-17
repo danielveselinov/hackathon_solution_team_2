@@ -10,19 +10,22 @@ import React, { SyntheticEvent, useState } from "react";
 // import NavDropdown from "react-bootstrap/NavDropdown";
 // import { Link } from "react-router-dom";
 import styles from "../styles/HeaderStyles/navbar.module.scss";
-import { BsFillCaretDownFill } from "react-icons/bs";
+import { GiHamburgerMenu } from "react-icons/gi";
 import logoDark from "../../public/images/logo-dark.png";
 import logoLight from "../../public/images/logo-light.png";
 export default function NavbarComp() {
   const { pathname } = useRouter();
   const [searchValue, setSearchValue] = useState("");
 
+  const [dropdownHandle, setdropdownHandle] = useState(false);
+  const [mobileDropDownHandle, setmobileDropDownHandle] = useState(false);
   return (
     // Tuka treba da se napravi ako rutata !/home, da bide transparent
     <div className="position-absolute pt-lg-5 pt-2 w-100">
       <nav
-        className="navbar navbar-expand-lg bg-transparent
-       px-4 px-lg-5 py-3 py-lg-0 sticky-top  d-flex justify-content-between align-items-center"
+        className="
+        position-relative navbar navbar-expand-lg bg-transparent
+        px-4 px-lg-5 py-3 py-lg-0 sticky-top d-flex justify-content-between align-items-center"
       >
         <Link href="/">
           <a className="navbar-brand p-0">
@@ -34,16 +37,20 @@ export default function NavbarComp() {
           </a>
         </Link>
         <button
-          className="navbar-toggler d-lg-none d-md-block"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarCollapse"
+          className={`${styles.burgerStyles} d-lg-none d-md-inline-block border-0 bg-transparent`}
+          onClick={() => setmobileDropDownHandle(!mobileDropDownHandle)}
         >
           <i>
-            <BsFillCaretDownFill />
+            <GiHamburgerMenu />
           </i>
         </button>
-        <div className="collapse navbar-collapse" id="navbarCollapse">
+        <div
+          className={`${styles.mobileDropdown} ${
+            mobileDropDownHandle ? `${styles.mobileDropdownActive}` : ""
+          } `}
+          id="navbarCollapse"
+        >
+          <h2 className="d-lg-none d-md-block ">Your secure world</h2>
           <div
             className={`${
               pathname === "/"
@@ -78,15 +85,39 @@ export default function NavbarComp() {
                 Mission
               </a>
             </Link>
-            <Link href="/services">
-              <a
-                className={`${
-                  pathname === "/services" ? `${styles.active}` : undefined
-                }`}
-              >
-                Services
-              </a>
-            </Link>
+
+            <a
+              onClick={() => setdropdownHandle(!dropdownHandle)}
+              className={`${styles.dropdownParent} ${
+                dropdownHandle && `${styles.dropdownActive}`
+              }`}
+            >
+              Services
+              {/* <BsFillCaretDownFill /> */}
+              <ul className={styles.dropdown}>
+                <li>
+                  <Link href="land-freight">
+                    <a>Land Freight</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="water-freight">
+                    <a>Water Freight</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="air-freight">
+                    <a>Air Freight</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="warehouse-storage">
+                    <a>Warehouse Storage</a>
+                  </Link>
+                </li>
+              </ul>
+            </a>
+
             <Link href="/careers" className=" ">
               <a
                 className={`${
