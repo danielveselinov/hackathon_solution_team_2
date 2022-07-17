@@ -32,7 +32,7 @@
                                     <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap light:text-white">
                                         {{ $blog->id }}
                                     </th>
-                                    <td class="py-4 px-6">{{ Str::limit($blog->text, 45) }}</td>
+                                    <td class="py-4 px-6">{!! Str::limit($blog->text, 45) !!}</td>
                                     <td class="py-4 px-6 text-blue-500 underline"><span class="view_image cursor-pointer" data-img="{{ $blog->image1 }}">Preview image</span></td>
                                     <td class="py-4 px-6 text-blue-500 underline"><span class="view_image cursor-pointer" data-img="{{ $blog->image2 }}">Preview image</span></td>
                                     <td class="py-4 px-6 flex">

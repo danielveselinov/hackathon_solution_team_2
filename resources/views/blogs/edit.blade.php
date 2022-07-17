@@ -16,7 +16,7 @@
                             @method('PUT')
                             <div class="mb-6">
                                 <label for="text" class="block mb-2 text-sm font-medium text-gray-900 light:text-gray-400">Text</label>
-                                <textarea id="text" name="text" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 light:bg-gray-700 light:border-gray-600 light:placeholder-gray-400 light:text-white light:focus:ring-blue-500 light:focus:border-blue-500" placeholder="Text..">{{ $blog->text }}</textarea>
+                                <textarea id="editor" name="text" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 light:bg-gray-700 light:border-gray-600 light:placeholder-gray-400 light:text-white light:focus:ring-blue-500 light:focus:border-blue-500" placeholder="Text..">{{ $blog->text }}</textarea>
                                 @error('text')
                                 <p class="mt-2 text-sm text-red-500 light:text-red-400">{{ $message }}</p>
                                 @enderror

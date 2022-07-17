@@ -18,6 +18,8 @@
 
         @vite('resources/js/modals/previewImageModal.js')
         @vite('resources/js/modals/deleteDataModal.js')
+        @vite('resources/js/wysiwyg/script.js')
+
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
@@ -37,5 +39,7 @@
                 {{ $slot }}
             </main>
         </div>
+        
+        <script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/ckeditor.js"></script>
     </body>
 </html>
