@@ -1,6 +1,5 @@
-import bakImage from "../../public/bakImage.png";
+import bakImage from "../../public/images/bakImage.png";
 
-import Image from "next/image";
 // icons
 import {
   AiFillInstagram,
