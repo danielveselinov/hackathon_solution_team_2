@@ -33,7 +33,7 @@
                                         {{ $n->id }}
                                     </th>
                                     <td class="py-4 px-6">{{ $n->title }}</td>
-                                    <td class="py-4 px-6">{{ $n->image }}</td>
+                                    <td class="py-4 px-6 text-blue-500 underline"><span class="view_image cursor-pointer" data-img="{{ $n->image }}">Preview image</span></td>
                                     <td class="py-4 px-6">{{ $n->link }}</td>
                                     <td class="py-4 px-6 flex">
                                         <a href="{{ route('news.edit', $n->id) }}" class="font-medium text-blue-600 light:text-blue-500 hover:underline">Edit</a>
@@ -49,6 +49,9 @@
                                 @endforeach
                             </tbody>
                         </table>
+
+                        <!-- <button id="testbtn" data-image="">Test</button> -->
+
                     </div>
                 </div>
             </div>
