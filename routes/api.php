@@ -1,14 +1,16 @@
 <?php
 
-use App\Http\Controllers\Api\BannerImagesController;
-use App\Http\Controllers\Api\BlogsController;
-use App\Http\Controllers\Api\CareersController;
-use App\Http\Controllers\Api\ContactCareersController;
-use App\Http\Controllers\Api\MissionsController;
-use App\Http\Controllers\Api\NewsController;
-use App\Http\Controllers\Api\ServicesController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\NewsController;
+use App\Http\Controllers\Api\BlogsController;
+use App\Http\Controllers\Api\CareersController;
+use App\Http\Controllers\Api\MissionsController;
+use App\Http\Controllers\Api\ServicesController;
+use App\Http\Controllers\ContactBusinessController;
+use App\Http\Controllers\Api\BannerImagesController;
+use App\Http\Controllers\Api\ContactBusinessController as ApiContactBusinessController;
+use App\Http\Controllers\Api\ContactCareersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,5 +33,5 @@ Route::get('/banner', [BannerImagesController::class, 'index']);
 
 
 Route::post('/contact/careers', [ContactCareersController::class, 'store']);
+Route::post('/contact/business', [ApiContactBusinessController::class, 'store']);
 // Route::post('/contact-personal', [ContactPersonalController::class, 'store']);
-// Route::post('/contact-business', [ContactBusinessController::class, 'store']);

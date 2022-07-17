@@ -3,6 +3,7 @@
 use App\Http\Controllers\BannerImagesController;
 use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\CareersController;
+use App\Http\Controllers\ContactBusinessController;
 use App\Http\Controllers\ContactCareersController;
 use App\Http\Controllers\MissionsController;
 use App\Http\Controllers\NewsController;
@@ -34,6 +35,7 @@ Route::middleware('auth')->group(function() {
     Route::resource('/blogs', BlogsController::class)->except('show');
     Route::resource('/missions', MissionsController::class)->except('show');
     Route::resource('/contact/careers', ContactCareersController::class)->only(['index', 'show']);
+    Route::resource('/contact/businesses', ContactBusinessController::class)->only(['index', 'show']);
 });
 
 Route::get('/news', [NewsController::class, 'index'])->name('news.index')->middleware('auth');
