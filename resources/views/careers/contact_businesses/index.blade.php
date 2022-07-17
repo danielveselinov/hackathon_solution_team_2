@@ -32,7 +32,13 @@
                                     <td class="py-4 px-6">{{ $business->email }}</td>
                                     <td class="py-4 px-6">{{ $business->company_name }}</td>
                                     <td class="py-4 px-6">{{ $business->phone_number }}</td>
-                                    <td class="py-4 px-6">{{ $business->is_seen ? 'Yes' : 'No' }}</td>
+                                    <td class="py-4 px-6" >
+                                        @if ($business->is_seen)
+                                        <span class="iconify" data-icon="codicon:verified-filled" style="color: green;" data-width="24" data-height="24"></span>
+                                        @else
+                                        <span class="iconify" data-icon="dashicons:no-alt" style="color: red;" data-width="24" data-height="24"></span>
+                                        @endif
+                                    </td>
                                     <td class="py-4 px-6 flex">
                                         <form method="POST" action="{{ route('businesses.show', $business->id) }}">
                                             @csrf

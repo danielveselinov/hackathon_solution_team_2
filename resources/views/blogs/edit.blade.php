@@ -23,11 +23,21 @@
                             </div>
 
                             <div class="mb-6">
+                                <p class="text-sm text-gray-400 light:text-gray-400">Current image:</p>
+                                <img class="w-50 h-50 rounded" src="/storage/{{ $blog->image1 }}" />
+                            </div>
+
+                            <div class="mb-6">
                                 <label class="block mb-2 text-sm font-medium text-gray-900 light:text-gray-300">Upload image</label>
                                 <input class="block w-full text-sm text-gray-900 bg-gray-50 border border-gray-300 cursor-pointer light:text-gray-400 focus:outline-none light:bg-gray-700 light:border-gray-600 light:placeholder-gray-400" id="image1" name="image1" type="file">
                                 @error('image1')
                                 <p class="mt-2 text-sm text-red-500 light:text-red-400">{{ $message }}</p>
                                 @enderror
+                            </div>
+
+                            <div class="mb-6">
+                                <p class="text-sm text-gray-400 light:text-gray-400">Current image:</p>
+                                <img class="w-50 h-50 rounded" src="/storage/{{ $blog->image2 }}" />
                             </div>
 
                             <div class="mb-6">

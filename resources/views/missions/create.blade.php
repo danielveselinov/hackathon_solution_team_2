@@ -31,10 +31,10 @@
                                 @enderror
                             </div>
 
-                            <div class="mb-6">
+                            <!-- <div class="mb-6">
                                 <p class="text-sm text-gray-400 light:text-gray-400">Selected image:</p>
                                 <img class="w-50 h-50 rounded" src="#" />
-                            </div>
+                            </div> -->
 
                             <div class="mb-6">
                                 <label class="block mb-2 text-sm font-medium text-gray-900 light:text-gray-300">Upload image</label>

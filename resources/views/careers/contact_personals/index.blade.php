@@ -28,7 +28,13 @@
                                     </th>
                                     <td class="py-4 px-6">{{ $personal->full_name }}</td>
                                     <td class="py-4 px-6">{{ $personal->email }}</td>
-                                    <td class="py-4 px-6">{{ $personal->is_seen ? 'Yes' : 'No' }}</td>
+                                    <td class="py-4 px-6" >
+                                        @if ($personal->is_seen)
+                                        <span class="iconify" data-icon="codicon:verified-filled" style="color: green;" data-width="24" data-height="24"></span>
+                                        @else
+                                        <span class="iconify" data-icon="dashicons:no-alt" style="color: red;" data-width="24" data-height="24"></span>
+                                        @endif
+                                    </td>
                                     <td class="py-4 px-6 flex">
                                         <form method="POST" action="{{ route('personals.show', $personal->id) }}">
                                             @csrf
