@@ -4,6 +4,9 @@
 
 .navbar-dark-text{
     color: var.$text-color-primary !important;
+    text-decoration: none;
+    margin-right: var.$gutter-base;
+
 } 
 
 .navbar-light-text {
@@ -16,4 +19,17 @@
     top: 0;
     right: 0;
     left: 0;
+}
+
+.active-dark {
+    background-color: var.$background-color-base;
+    clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+    color: var.$text-color-binary;
+}
+
+.active-light {
+    background-color: var.$background-color-primary;
+    clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+    color: var.$background-color-base;
+
 }

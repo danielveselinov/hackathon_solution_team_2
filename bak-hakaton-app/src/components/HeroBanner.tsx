@@ -10,7 +10,10 @@ export default function HeroBanner() {
       <div className={styles.HeroBanner}>
         <div className={styles.letterB}>
           <Carousel fade variant="dark">
-            <Carousel.Item interval={500}>
+            <Carousel.Item
+              interval={500}
+              className={styles["carousel-indicators-custom"]}
+            >
               <img
                 className="d-block w-100"
                 src="https://images.unsplash.com/photo-1657804561950-3732c7f0e81a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"

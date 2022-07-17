@@ -8,6 +8,7 @@ import { BlogType } from "../components/BlogInner";
 
 import styles from "../styles/mission.module.scss";
 import MissionInner from "../components/MissionInner";
+import MissionCarousel from "../components/MissionCarousel";
 
 interface Props {
   missions: BlogType[];
@@ -16,6 +17,7 @@ interface Props {
 export const Mission: NextPage<Props> = ({ missions }) => {
   return (
     <>
+      <MissionCarousel />
       <section className={styles["missions-container"]}>
         {missions.map((mission) => (
           <MissionInner key={mission.id} mission={mission} />

@@ -1,0 +1,28 @@
+@use "../styles/variables.scss" as var;
+@use "../styles/mixins.scss" as mix;
+@use "sass:math";
+
+.missionCarousel  {
+    max-width: 60% !important;
+    height: 400px !important;
+    padding-top: 100px;
+    margin: 0px  auto ;
+    
+}
+.carousel-indicators {
+    display: none !important;
+}
+
+.carousel-indicators {
+    display: none !important;
+}
+
+@include mix.tablet-styles {
+    .missionCarousel  {
+        max-width: 90% !important;
+        // height: 400px !important;
+        // padding-top: 100px;
+        // margin: 0px  auto ;
+        
+    }
+}

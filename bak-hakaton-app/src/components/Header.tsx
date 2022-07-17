@@ -5,10 +5,5 @@ import styles from "../styles/HeaderStyles/headerGlobal.module.scss";
 import MainTitle from "./MainTitle";
 
 export default function Header() {
-  return (
-    <div className={styles["Header"]}>
-      <NavbarComp />
-      {/* <HeroBanner /> */}
-    </div>
-  );
+  return <div className={styles["Header"]}>{/* <HeroBanner /> */}</div>;
 }
