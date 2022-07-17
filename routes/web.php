@@ -5,6 +5,7 @@ use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\CareersController;
 use App\Http\Controllers\ContactBusinessController;
 use App\Http\Controllers\ContactCareersController;
+use App\Http\Controllers\ContactPeronalsController;
 use App\Http\Controllers\MissionsController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ServicesController;
@@ -34,11 +35,12 @@ require __DIR__.'/auth.php';
 Route::middleware('auth')->group(function() {
     Route::resource('/blogs', BlogsController::class)->except('show');
     Route::resource('/missions', MissionsController::class)->except('show');
+    Route::get('/careers', [CareersController::class, 'index'])->name('default.careers.index');
     Route::resource('/contact/careers', ContactCareersController::class)->only(['index', 'show']);
     Route::resource('/contact/businesses', ContactBusinessController::class)->only(['index', 'show']);
+    Route::resource('/contact/personals', ContactPeronalsController::class)->only(['index', 'show']);
 });
 
 Route::get('/news', [NewsController::class, 'index'])->name('news.index')->middleware('auth');
-Route::get('/careers', [CareersController::class, 'index'])->name('default.careers.index')->middleware('auth');
 Route::get('/services', [ServicesController::class, 'index'])->name('services.index')->middleware('auth');
 Route::get('/banner', [BannerImagesController::class, 'index'])->name('banner.index')->middleware('auth');

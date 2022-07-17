@@ -11,6 +11,7 @@ use App\Http\Controllers\ContactBusinessController;
 use App\Http\Controllers\Api\BannerImagesController;
 use App\Http\Controllers\Api\ContactBusinessController as ApiContactBusinessController;
 use App\Http\Controllers\Api\ContactCareersController;
+use App\Http\Controllers\Api\ContactPeronalsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,7 +32,6 @@ Route::get('/careers', [CareersController::class, 'index']);
 Route::get('/services', [ServicesController::class, 'index']);
 Route::get('/banner', [BannerImagesController::class, 'index']);
 
-
 Route::post('/contact/careers', [ContactCareersController::class, 'store']);
 Route::post('/contact/business', [ApiContactBusinessController::class, 'store']);
-// Route::post('/contact-personal', [ContactPersonalController::class, 'store']);
+Route::post('/contact/personal', [ContactPeronalsController::class, 'store']);
