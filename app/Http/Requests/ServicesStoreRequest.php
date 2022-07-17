@@ -28,7 +28,7 @@ class ServicesStoreRequest extends FormRequest
             'text2' => 'required',
             'image1' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'image2' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'type' => 'required|boolean',
+            'type' => 'required',
         ];
     }
 }
