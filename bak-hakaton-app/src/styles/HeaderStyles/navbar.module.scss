@@ -3,16 +3,40 @@
 @use "sass:math";
 
 .navbar-dark-text{
-    color: var.$text-color-primary !important;
-    text-decoration: none;
-    margin-right: var.$gutter-base;
-
+    a {
+      font-size: var.$font-size-base;
+      color: var.$text-color-primary !important;
+      text-decoration: none;
+      margin-right: var.$gutter-base;
+    }
+    .active{
+      background-color: var.$background-color-base;
+      clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+      color: var.$text-color-binary !important;
+      padding-left: 20px;
+      padding-right: 20px;
+  }
 } 
 
 .navbar-light-text {
-  color: var.$text-color-base !important;
+  a {
+    font-size: var.$font-size-base;
+    color: var.$text-color-binary !important;
+    text-decoration: none;
+    margin-right: var.$gutter-base;
+  }
+  .active{
+    background-color: var.$background-color-primary;
+    clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+    color: var.$text-color-primary !important;
 }
 
+}
+
+.logoStyles {
+  width: 110px;
+  height: 50px;
+}
 .transparent {
   background-color: #ff000000 !important;
   position: absolute;
@@ -21,15 +45,14 @@
   left: 0;
 }
 
-.active-dark {
-    background-color: var.$background-color-base;
-    clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
-    color: var.$text-color-binary;
-}
+// .active{
+//     background-color: var.$background-color-base;
+//     clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+//     color: var.$text-color-binary;
+// }
 
-.active-light {
-    background-color: var.$background-color-primary;
-    clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
-    color: var.$background-color-base;
-
-}
+// .active-light {
+//     background-color: var.$background-color-primary;
+//     clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+//     color: var.$background-color-base;
+// }
