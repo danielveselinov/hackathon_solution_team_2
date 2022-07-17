@@ -25,8 +25,8 @@ class CareerUpdateRequest extends FormRequest
     {
         return [
             'text' => 'required',
-            'image1' => 'nullable|image',
-            'image2' => 'nullable|image',
+            'image1' => 'nullable|image|size:5120',
+            'image2' => 'nullable|image|size:5120',
         ];
     }
 }

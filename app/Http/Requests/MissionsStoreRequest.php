@@ -24,9 +24,9 @@ class MissionsStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required',
-            'text' => 'required|max:255',
-            'image' => 'required|image'
+            'title' => 'required|max:255',
+            'text' => 'required',
+            'image' => 'required|image|size:5120'
         ];
     }
 }

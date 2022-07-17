@@ -24,7 +24,7 @@ class BannerUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'image' => 'nullable|image',
+            'image' => 'nullable|image|size:5120',
             'status' => 'nullable|boolean',
         ];
     }

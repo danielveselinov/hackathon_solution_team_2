@@ -24,9 +24,9 @@ class MissionsUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required',
-            'text' => 'required|max:255',
-            'image' => 'nullable|image',
+            'title' => 'required|max:255',
+            'text' => 'required',
+            'image' => 'nullable|image|size:5120',
         ];
     }
 }

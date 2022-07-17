@@ -26,9 +26,9 @@ class ServicesStoreRequest extends FormRequest
         return [
             'text1' => 'required',
             'text2' => 'required',
-            'image1' => 'required|image',
-            'image2' => 'required|image',
-            'type' => 'required',
+            'image1' => 'required|image|size:5120',
+            'image2' => 'required|image|size:5120',
+            'type' => 'required|boolean',
         ];
     }
 }

@@ -26,8 +26,8 @@ class ServicesUpdateRequest extends FormRequest
         return [
             'text1' => 'required',
             'text2' => 'required',
-            'image1' => 'nullable|image',
-            'image2' => 'nullable|image',
+            'image1' => 'nullable|image|size:5120',
+            'image2' => 'nullable|image|size:5120',
             'type' => 'required',
         ];
     }
