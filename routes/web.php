@@ -36,6 +36,9 @@ Route::middleware('auth')->group(function() {
     Route::resource('/blogs', BlogsController::class)->except('show');
     Route::resource('/missions', MissionsController::class)->except('show');
     Route::get('/careers', [CareersController::class, 'index'])->name('default.careers.index');
+    Route::get('/contacts', function() {
+        return view('contacts.index');
+    })->name('default.contact.index');
     Route::resource('/contact/careers', ContactCareersController::class)->only(['index', 'show']);
     Route::resource('/contact/businesses', ContactBusinessController::class)->only(['index', 'show']);
     Route::resource('/contact/personals', ContactPeronalsController::class)->only(['index', 'show']);
