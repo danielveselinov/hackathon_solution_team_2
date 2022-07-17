@@ -31,6 +31,7 @@ const Home: NextPage<Props> = () => {
         <MainTitle />
       </div>
       <Blog />
+      <ServiceCards />
       <News />
       <HomePageContactForm />
     </div>

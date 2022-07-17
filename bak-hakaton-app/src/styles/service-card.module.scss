@@ -1,4 +1,5 @@
 @use "../styles/variables.scss" as var;
+@use "./mixins.scss" as mix;
 
 .service-card {
   flex-basis: 34%;
@@ -34,6 +35,7 @@
       height: 100%;
       object-fit: cover;
       transition: all 0.4s ease;
+      display: block;
     }
 
     p {
@@ -49,7 +51,7 @@
 
     &:hover {
       img {
-        transform: scale(1.15);
+        transform: scale(1.2);
       }
 
       p {
@@ -63,9 +65,13 @@
   }
 
   .service-card-title {
-    font-size: 30px;
+    font-size: 28px;
     color: var.$background-color-quartertiary;
     font-weight: 500;
     margin-top: 10px;
+
+    @include mix.tablet-styles {
+      font-size: 18px;
+    }
   }
 }

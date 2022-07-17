@@ -12,19 +12,19 @@ export const Blog = () => {
     <section className={styles.blog}>
       <BlogInner
         text={
-          "1 In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available."
+          "BAK handles all of the challenges and paperwork associated with carriers, customs... "
         }
         image={imageOne.src}
-        title={"lorem ipsum"}
+        title={"What we stand for"}
         titleStyle={BLOG_STYLE.blogOne}
         path={"/about"}
       />
       <BlogInner
         text={
-          "1 In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available."
+          "Connetinons around the world 100+units packing deleverd Custumer care 24/7"
         }
         image={imageTwo.src}
-        title={"lorem ipsum"}
+        title={"What we do"}
         titleStyle={BLOG_STYLE.blogTwo}
         path={"/mission"}
       />

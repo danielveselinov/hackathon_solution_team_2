@@ -1,22 +1,25 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import React from "react";
 
 import styles from "../styles/service-card.module.scss";
 
-interface Props {}
+interface Props {
+  path: string;
+  img: string;
+  desc: string;
+  title: string;
+}
 
-const ServiceCard: React.FC<Props> = () => {
+const ServiceCard: React.FC<Props> = ({ desc, img, path, title }) => {
   return (
-    <Link href="/">
-      <a className={styles["service-card"]} href="">
+    <Link href={path}>
+      <a className={styles["service-card"]}>
         <div className={styles["details-container"]}>
-          <img
-            src="https://i.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI"
-            alt=""
-          />
-          <p>Lorem, ipsum dolor.</p>
+          <img src={img} alt={title} />
+          <p>{desc}</p>
         </div>
-        <p className={styles["service-card-title"]}>Title</p>
+        <p className={styles["service-card-title"]}>{title}</p>
       </a>
     </Link>
   );

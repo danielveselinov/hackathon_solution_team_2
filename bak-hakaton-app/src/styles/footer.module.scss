@@ -22,7 +22,7 @@
   }
 
   .footer-links-container {
-    padding-left: 60px;
+    padding-left: (var.$gutter-base * 2.8);
     @include mix.tablet-styles {
       order: 2;
       padding: 0;
@@ -45,14 +45,18 @@
     img {
       width: 220px;
       height: 120px;
+
+      @include mix.tablet-styles {
+        width: 180px;
+        height: 90px;
+      }
     }
   }
 
   .footer-media-links-container {
     display: flex;
     gap: 20px;
-    padding-right: 40px;
-
+    padding-right: (var.$gutter-base * 1.8);
     @include mix.tablet-styles {
       order: 3;
       gap: 60px;
