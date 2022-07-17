@@ -33,8 +33,8 @@
                                         {{ $blog->id }}
                                     </th>
                                     <td class="py-4 px-6">{{ Str::limit($blog->text, 45) }}</td>
-                                    <td class="py-4 px-6">{{ Str::limit($blog->image1, 10) }}</td>
-                                    <td class="py-4 px-6">{{ Str::limit($blog->image2, 10) }}</td>
+                                    <td class="py-4 px-6 text-blue-500 underline"><span class="view_image cursor-pointer" data-img="{{ $blog->image1 }}">Preview image</span></td>
+                                    <td class="py-4 px-6 text-blue-500 underline"><span class="view_image cursor-pointer" data-img="{{ $blog->image2 }}">Preview image</span></td>
                                     <td class="py-4 px-6 flex">
                                         <a href="{{ route('blogs.edit', $blog->id) }}" class="font-medium text-blue-600 light:text-blue-500 hover:underline">Edit</a>
                                         <form method="POST" action="{{ route('blogs.destroy', $blog->id) }}">

@@ -33,8 +33,9 @@
                                         {{ $mission->id }}
                                     </th>
                                     <td class="py-4 px-6">{{ Str::limit($mission->title, 45) }}</td>
-                                    <td class="py-4 px-6">{{ Str::limit($mission->text, 10) }}</td>
-                                    <td class="py-4 px-6">{{ Str::limit($mission->image, 10) }}</td>
+                                    <td class="py-4 px-6">{{ Str::limit($mission->text, 30) }}</td>
+                                    <td class="py-4 px-6 text-blue-500 underline"><span class="view_image cursor-pointer" data-img="{{ $mission->image }}">Preview image</span></td>
+
                                     <td class="py-4 px-6 flex">
                                         <a href="{{ route('missions.edit', $mission->id) }}" class="font-medium text-blue-600 light:text-blue-500 hover:underline">Edit</a>
                                         <form method="POST" action="{{ route('missions.destroy', $mission->id) }}">
