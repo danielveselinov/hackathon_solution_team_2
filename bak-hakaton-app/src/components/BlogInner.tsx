@@ -1,43 +1,42 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
+import Link from "next/link";
 
 // styles
 import styles from "../styles/blog-inner.module.scss";
 
-export interface BlogType {
-  id: string;
-  title: string;
-  text: string;
-  image: string;
-}
+export const BLOG_STYLE = {
+  blogOne: "blog-inner-title-one",
+  blogTwo: "blog-inner-title-two",
+};
 
 interface Props {
-  blog: BlogType;
-  idx: number;
+  image: string;
+  text: string;
+  title: string;
+  titleStyle: string;
+  path: string;
 }
 
-const BlogInner: React.FC<Props> = ({ blog, idx }) => {
-  const { image, text, title } = blog;
+const BlogInner: React.FC<Props> = ({
+  image,
+  text,
+  title,
+  titleStyle,
+  path,
+}) => {
   return (
     <div className={styles["blog-inner"]}>
-      <h2
-        className={`${
-          idx % 2 === 0
-            ? styles["blog-inner-title-one"]
-            : styles["blog-inner-title-two"]
-        }`}
-      >
-        {title}
-      </h2>
+      <h2 className={styles[titleStyle]}>{title}</h2>
       <div className={styles["blog-inner-content"]}>
         <div className={styles["blog-inner-desc"]}>
           <p>{text}</p>
-          <a href="#">Read more</a>
+          <Link href={path}>
+            <a href="#">Read more</a>
+          </Link>
         </div>
         <div className={styles["blog-inner-img-container"]}>
-          <img
-            src={`https://5884-46-217-247-67.eu.ngrok.io/storage/${image}`}
-            alt={title}
-          />
+          <img src={image} alt={title} />
         </div>
       </div>
     </div>

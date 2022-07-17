@@ -1,6 +1,6 @@
-@use '../variables.scss' as var;
-@use '../mixins.scss' as mix;
-@use 'sass:math';
+@use "../variables.scss" as var;
+@use "../mixins.scss" as mix;
+@use "sass:math";
 
 .navbar-dark-text{
     color: var.$text-color-primary !important;
@@ -10,15 +10,15 @@
 } 
 
 .navbar-light-text {
-    color: var.$text-color-base !important;
-} 
+  color: var.$text-color-base !important;
+}
 
 .transparent {
-    background-color: #ff000000 !important;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
+  background-color: #ff000000 !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
 .active-dark {

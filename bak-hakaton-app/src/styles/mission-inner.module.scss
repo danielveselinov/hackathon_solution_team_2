@@ -22,12 +22,15 @@
     .mission-inner-desc {
       padding: var.$gutter-base (var.$gutter-base * 1.2)
         math.div(var.$gutter-base, 2.5);
-      flex-basis: 55%;
+      flex-basis: 60%;
       background-color: var.$background-color-primary;
       color: var.$text-color-primary;
 
       p {
-        font-size: 14px;
+        width: 80%;
+        @include mix.tablet-styles {
+          width: 100%;
+        }
       }
 
       a {
@@ -37,7 +40,7 @@
       }
     }
     .mission-inner-img-container {
-      flex-basis: 45%;
+      flex-basis: 40%;
 
       img {
         width: 100%;
