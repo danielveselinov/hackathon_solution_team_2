@@ -40,9 +40,7 @@
                                         <form method="POST" action="{{ route('blogs.destroy', $blog->id) }}">
                                             @csrf
                                             @method('DELETE')
-                                            <a href="{{ route('blogs.destroy', $blog->id) }}" class="font-medium text-blue-600 light:text-blue-500 hover:underline ml-2"
-                                            onclick="event.preventDefault();
-                                                                this.closest('form').submit();">Delete</a>
+                                            <a href="{{ route('blogs.destroy', $blog->id) }}" class="font-medium text-blue-600 light:text-blue-500 hover:underline ml-2 confirm_image_delete">Delete</a>
                                         </form>
                                     </td>
                                 </tr>

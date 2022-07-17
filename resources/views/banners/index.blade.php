@@ -1,8 +1,8 @@
 <x-app-layout>
-   <x-slot name="header">
+    <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Banners') }}
-        </h2> 
+        </h2>
     </x-slot>
 
     <div class="py-12">
@@ -44,8 +44,7 @@
                                         <form method="POST" action="{{ route('banners.destroy', $banner->id) }}">
                                             @csrf
                                             @method('DELETE')
-                                            <a href="{{ route('banners.destroy', $banner->id) }}" class="font-medium text-blue-600 light:text-blue-500 hover:underline ml-2" onclick="event.preventDefault();
-                                                                this.closest('form').submit();">Delete</a>
+                                            <a href="{{ route('banners.destroy', $banner->id) }}" class="font-medium text-blue-600 light:text-blue-500 hover:underline ml-2 confirm_image_delete">Delete</a>
                                         </form>
                                     </td>
                                 </tr>
