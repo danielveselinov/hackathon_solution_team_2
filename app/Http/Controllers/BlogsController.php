@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\BlogStoreRequest;
 use App\Models\AboutUsBlog;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
+use App\Http\Requests\BlogStoreRequest;
 
 class BlogsController extends Controller
 {
@@ -50,11 +51,15 @@ class BlogsController extends Controller
         if (request('image1')) {
             $imagePath = request('image1')->store('uploads/about_us_blogs', 'public');
             $firstImg = ['image1' => $imagePath];
+
+            File::delete(public_path('storage/'.$blog->image1));
         }
 
         if (request('image2')) {
             $imagePath2 = request('image2')->store('uploads/about_us_blogs', 'public');
             $otherImg = ['image2' => $imagePath2];
+
+            File::delete(public_path('storage/'.$blog->image2));
         }
     
         $blog->update(array_merge(
@@ -68,6 +73,10 @@ class BlogsController extends Controller
 
     public function destroy(AboutUsBlog $blog)
     {
+
+        File::delete(public_path('storage/'.$blog->image1));
+        File::delete(public_path('storage/'.$blog->image2));
+
         $blog->delete();
 
         return to_route('blogs.index')->with(['blogMessages' => true, 'message' => 'About us blog deleted!']);;
